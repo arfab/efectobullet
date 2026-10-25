@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Efecto Bullet: Deuda Cognitiva y la Ilusión de la Velocidad en la Era de la IA | Ariel Fabian</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="Monografía técnica y manifiesto sobre la acumulación de deuda cognitiva al programar con IA generativa. Regla del 10+10, Peaje Cognitivo y Modelo Centauro. DOI: 10.5281/zenodo.23641059.">
+  <meta name="author" content="Ariel Fabian">
+  <meta name="keywords" content="deuda cognitiva, ai coding, vibe coding, software engineering, peaje cognitivo, ajedrez bullet, peter naur, generative ai, llm code review, fagan inspection">
+  
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="El Efecto Bullet: Deuda Cognitiva y la Ilusión de la Velocidad en la Era de la IA">
+  <meta property="og:description" content="La IA genera código en segundos. Eso no significa que tu equipo lo entienda. Un marco operativo para recuperar la gobernanza y la asimilación técnica.">
+  <meta property="og:url" content="https://arfab.github.io/efectobullet/">
+  <meta property="og:image" content="images/hero_chess_knight.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Efecto Bullet: Deuda Cognitiva en la Era de la IA">
+  <meta name="twitter:description" content="Posición técnica formal y propuesta metodológica publicada en Zenodo con DOI oficial.">
+  <meta name="twitter:image" content="images/hero_chess_knight.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♞</text></svg>">
+
+  <!-- Google Fonts: Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ====================================================================
+       HEADER / NAVBAR
+       ==================================================================== -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand">
+        <span class="brand-icon">♞</span>
+        <span>EL EFECTO BULLET</span>
+        <span class="brand-badge">MONOGRAFÍA TÉCNICA</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#problema">El Problema</a></li>
+        <li><a href="#evidencia">Datos Empíricos</a></li>
+        <li><a href="#pilares">5 Reglas</a></li>
+        <li><a href="#calculadora">Calculadora 10+10</a></li>
+        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#citar">Citar</a></li>
+        <li><a href="#autor">Autor</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://doi.org/10.5281/zenodo.23641059" target="_blank" rel="noopener noreferrer" class="pill pill-doi">
+          <span class="doi-dot"></span> DOI Zenodo
+        </a>
+        <a href="docs/El_Efecto_Bullet.pdf" download class="btn btn-primary btn-sm">Descargar PDF</a>
+        <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-meta">
+            <a href="https://doi.org/10.5281/zenodo.23641059" target="_blank" rel="noopener noreferrer" class="pill pill-doi">
+              <span class="doi-dot"></span> DOI: 10.5281/zenodo.23641059
+            </a>
+            <span class="separator">·</span>
+            <span>Por Ariel Fabian</span>
+            <span class="separator">·</span>
+            <span>Octubre 2026</span>
+          </div>
+
+          <h1 class="hero-title">El Efecto Bullet</h1>
+          <h2 class="hero-subtitle">Deuda Cognitiva y la Ilusión de la Velocidad en la Era de la IA</h2>
+
+          <p class="hero-desc">
+            <strong>La IA genera código en segundos. Eso no significa que tu equipo lo entienda.</strong><br>
+            Antes, la lentitud manual obligaba a construir un modelo mental del sistema. Al acelerar la escritura y saltear el razonamiento, el código parece prolijo pero nadie participó en las decisiones. Acumulamos así <strong>deuda cognitiva</strong>: sistemas que funcionan en producción, pero que nadie sabe modificar con seguridad.
+          </p>
+
+          <div class="hero-actions">
+            <a href="docs/El_Efecto_Bullet.pdf" download class="btn btn-primary">
+              Descargar Monografía (PDF 19p)
+            </a>
+            <a href="#slides-modal" class="btn btn-secondary js-open-slides">
+              Ver Diapositivas Interactivas
+            </a>
+            <a href="#calculadora" class="btn btn-secondary">
+              Calculadora de Asimilación
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <img src="images/hero_chess_knight.jpg" alt="Ajedrez y código neuronal - El Efecto Bullet">
+            <div class="hero-card-overlay">
+              <span class="hero-card-tag">Metáfora Central</span>
+              <div class="hero-card-title">Del Reflejo Muscular a la Teoría del Programa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         DATA GRID: LA CRISIS EN CIFRAS
+         ==================================================================== -->
+    <section id="evidencia" class="data-grid-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="pill pill-amber">EVIDENCIA CUANTITATIVA 2025 - 2026</span>
+          <h2>Qué dicen los datos empíricos</h2>
+          <p>Ningún estudio prueba la tesis por sí solo. Juntos revelan un patrón alarmante en la ingeniería de software contemporánea:</p>
+        </div>
+
+        <div class="data-grid">
+          <div class="stat-card">
+            <div class="stat-value red">48% → 21%</div>
+            <div class="stat-label">Desplome de la Revisión Humana Profunda</div>
+            <div class="stat-desc">Estudio longitudinal sobre 196.000 Pull Requests reales tras mandatos corporativos de velocidad asistida por IA.</div>
+            <div class="stat-source">He & Vasilescu (Carnegie Mellon & Stanford, 2026)</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-value red">+125.4%</div>
+            <div class="stat-label">Explosión de Incidentes Críticos en Producción</div>
+            <div class="stat-desc">En organizaciones con adopción masiva sin reglas, los cambios aprobados sin revisión subieron 76,3% y las fallas críticas 125,4%.</div>
+            <div class="stat-source">Faros AI Engineering Report (2026)</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-value amber">-17 pp</div>
+            <div class="stat-label">Pérdida Neta de Comprensión y Retención</div>
+            <div class="stat-desc">Desarrolladores que aprendieron librerías delegando el código en la IA obtuvieron 50% de comprensión frente al 67% del grupo manual.</div>
+            <div class="stat-source">Shen & Tamkin (Anthropic Research, 2025)</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-value amber">3.2x</div>
+            <div class="stat-label">Aceptación Ciega bajo Presión de Tiempo</div>
+            <div class="stat-desc">Bajo exigencia de velocidad, las probabilidades de aceptar respuestas erróneas o alucinadas del modelo se multiplicaron por más de tres.</div>
+            <div class="stat-source">Shaw & Nave (Wharton School, 2026)</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-value emerald">64% vs 30%</div>
+            <div class="stat-label">La Asimilación Activa Duplica el Aprendizaje</div>
+            <div class="stat-desc">Bloquear el acceso inmediato a la IA hasta que el humano formule su hipótesis duplica con creces la retención a largo plazo.</div>
+            <div class="stat-source">Poulidis et al. (Wharton School, 2025)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         EL PROBLEMA & LA METÁFORA DEL AJEDREZ
+         ==================================================================== -->
+    <section id="problema">
+      <div class="container metaphor-grid">
+        <div class="metaphor-image-container">
+          <img src="images/chess_clock_fischer.jpg" alt="Reloj Fischer de ajedrez bajo presión de tiempo">
+        </div>
+
+        <div class="metaphor-text">
+          <span class="pill pill-amber">ANALOGÍA EPISTEMOLÓGICA</span>
+          <h2>El Ajedrez Bullet y la pérdida de la Teoría del Programa</h2>
+          <p>
+            En ajedrez, las partidas a 1 minuto (<em>Bullet</em>) obligan a mover por reflejo muscular y reconocimiento visual instantáneo. Todo cálculo profundo y anticipación táctica se suprimen para evitar que caiga la aguja del reloj.
+          </p>
+          <p>
+            En el desarrollo de software asistido por IA ocurre un colapso análogo: el desarrollador acepta código a ritmo de vértigo sin haber transitado el proceso de descartar alternativas.
+          </p>
+
+          <div class="quote-box">
+            <blockquote>
+              "Programar no es la mera producción de líneas de código; es la construcción de una teoría mental viva sobre cómo el programa se corresponde con el problema real del mundo."
+            </blockquote>
+            <cite>— Peter Naur (Premio Turing), <em>Programming as Theory Building</em> (1985)</cite>
+          </div>
+
+          <p>
+            Sin esa teoría mental en la cabeza del equipo, el software se vuelve una caja negra impenetrable. Cualquier refactorización futura o incidente en producción se convierte en un riesgo sistémico.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         LOS 5 PILARES / REGLAS OPERATIVAS
+         ==================================================================== -->
+    <section id="pilares" style="background: rgba(11, 15, 25, 0.5);">
+      <div class="container">
+        <div class="section-header">
+          <span class="pill pill-amber">MARCO DE GOBERNANZA TÉCNICA</span>
+          <h2>Cinco Reglas Operativas</h2>
+          <p>Adaptadas de la ciencia de la inspección de software y la teoría de decisiones. Propuestas concretas para recuperar la asimilación técnica sin renunciar a la aceleración asistida:</p>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Pilar 1 -->
+          <div class="pillar-card">
+            <div class="pillar-num">REGLA 01</div>
+            <h3 class="pillar-title">Control de Ritmo</h3>
+            <p class="pillar-desc">
+              Clasificación estricta antes de escribir la primera línea. Un script descartable tolera hiper-velocidad; el motor de facturación o la concurrencia transaccional, no.
+            </p>
+            <ul class="pillar-list">
+              <li>Módulos clasificados en Periféricos vs. Críticos.</li>
+              <li>En componentes críticos, el diseño se piensa a ritmo clásico.</li>
+              <li>Métricas desacopladas de tickets cerrados o LOCs generadas.</li>
+            </ul>
+          </div>
+
+          <!-- Pilar 2 -->
+          <div class="pillar-card highlight">
+            <div class="pillar-num">REGLA 02 · NÚCLEO</div>
+            <h3 class="pillar-title">La Regla del 10 + 10</h3>
+            <p class="pillar-desc">
+              Por cada hora de generación asistida en lógica crítica, se reserva obligatoriamente una hora para lectura, comprensión y verificación humana.
+            </p>
+            <ul class="pillar-list">
+              <li>4h de generación IA + 4h de asimilación = 8h totales (5x más rápido que 40h manuales).</li>
+              <li>Basado en Fagan (1976): 100 a 200 líneas de lógica densa por hora.</li>
+              <li>Tope riguroso a la fatiga cognitiva por revisión de PRs.</li>
+            </ul>
+          </div>
+
+          <!-- Pilar 3 -->
+          <div class="pillar-card">
+            <div class="pillar-num">REGLA 03</div>
+            <h3 class="pillar-title">Peaje Cognitivo</h3>
+            <p class="pillar-desc">
+              Pausa forzada antes del commit. Un agente o auditor interroga al desarrollador con tres preguntas socráticas derivadas de Naur, sin ayuda de la IA.
+            </p>
+            <ul class="pillar-list">
+              <li><strong>Invariantes:</strong> ¿Cómo viajan los datos y qué garantías se preservan?</li>
+              <li><strong>Fallas:</strong> ¿Qué supuestos hay sobre red, locks y nulos?</li>
+              <li><strong>Cambio:</strong> Si cambia la regla de negocio, ¿qué se rompe?</li>
+            </ul>
+          </div>
+
+          <!-- Pilar 4 -->
+          <div class="pillar-card">
+            <div class="pillar-num">REGLA 04</div>
+            <h3 class="pillar-title">Auditoría Preventiva</h3>
+            <p class="pillar-desc">
+              La IA tiende naturalmente a resolver el "happy path". La auditoría preventiva inspecciona los vectores donde los modelos suelen fallar en silencio.
+            </p>
+            <ul class="pillar-list">
+              <li>Concurrencia, deadlocks e idempotencia bajo reintentos.</li>
+              <li>Datos sucios: campos nulos, registros rotos, cortes de red.</li>
+              <li>Fallas ruidosas y explícitas, nunca degradaciones silenciosas.</li>
+            </ul>
+          </div>
+
+          <!-- Pilar 5 -->
+          <div class="pillar-card" style="grid-column: span 1.5;">
+            <div class="pillar-num">REGLA 05</div>
+            <h3 class="pillar-title">Modelo Centauro</h3>
+            <p class="pillar-desc">
+              Basado en el torneo Freestyle de 2005 citado por Gary Kaspárov: un proceso humano riguroso supera a la potencia computacional desprovista de método.
+            </p>
+            <ul class="pillar-list">
+              <li>El equipo conserva la arquitectura y la visión estratégica del sistema.</li>
+              <li>El programador conduce y arbitra; no compite en velocidad ciega con el generador.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SIMULACIÓN TERMINAL PEAJE COGNITIVO -->
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <span class="terminal-title">bash — hook pre-commit: peaje-cognitivo v1.2</span>
+            <span></span>
+          </div>
+          <div class="terminal-body">
+            <div><span class="t-prompt">$</span> <span class="t-cmd">git commit -m "feat(billing): motor de cobro concurrente con Stripe"</span></div>
+            <div class="t-warn">[PEAJE COGNITIVO] Módulo crítico detectado: src/billing/settlement_service.py (+248 LOC)</div>
+            <div class="t-dim">Calculando tiempo de asimilación según Fagan (100 LOC/h) ... 2h 28m requeridas.</div>
+            <br>
+            <div class="t-blue">? Pregunta 1/3 [Invariantes]: Si dos webhooks de cobro llegan con 5ms de diferencia, ¿cómo garantiza tu código la idempotencia sin duplicar cargos?</div>
+            <div><span class="t-prompt">&gt;</span> <span style="color:#f8fafc;">Uso SELECT ... FOR UPDATE en la fila del invoice con constraint única en idempotency_key.</span></div>
+            <br>
+            <div class="t-blue">? Pregunta 2/3 [Fallas]: ¿Qué ocurre si la pasarela responde timeout tras debitar el saldo pero antes del ack local?</div>
+            <div><span class="t-prompt">&gt;</span> <span style="color:#f8fafc;">Se programa un job de conciliación diferida que consulta el endpoint de verificación con backoff.</span></div>
+            <br>
+            <div class="t-pass">✓ Semáforo: VERDE (Comprensión arquitectónica verificada. Commit habilitado).</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CALCULADORA INTERACTIVA DE ASIMILACIÓN (10+10)
+         ==================================================================== -->
+    <section id="calculadora">
+      <div class="container">
+        <div class="section-header">
+          <span class="pill pill-amber">HERRAMIENTA PARA LÍDERES TÉCNICOS</span>
+          <h2>Calculadora de Asimilación y Regla 10+10</h2>
+          <p>Calculá en tiempo real el tiempo mínimo de inspección activa y reserva cognitiva que tu equipo necesita para no acumular deuda ciega:</p>
+        </div>
+
+        <div class="calculator-card">
+          <div class="calc-inputs">
+            <div class="form-group">
+              <div class="form-label-row">
+                <label for="calc-locs" class="form-label">Líneas de Código Generadas (LOC)</label>
+                <span id="val-locs" class="form-value-display">250 LOC</span>
+              </div>
+              <input type="range" id="calc-locs" min="50" max="1500" step="25" value="250">
+            </div>
+
+            <div class="form-group">
+              <div class="form-label-row">
+                <label for="calc-ai-hours" class="form-label">Tiempo Invertido en Generación / Prompts</label>
+                <span id="val-ai-hours" class="form-value-display">2.0 h</span>
+              </div>
+              <input type="range" id="calc-ai-hours" min="0.5" max="10" step="0.5" value="2.0">
+            </div>
+
+            <div class="form-group">
+              <label for="calc-crit" class="form-label">Criticidad del Componente</label>
+              <select id="calc-crit" class="select-styled">
+                <option value="normal">Periférico / Normal (UI, maquetas, scripts)</option>
+                <option value="alta" selected>Alta (Integraciones, APIs de clientes, ETL)</option>
+                <option value="critica">Crítica Transaccional (Facturación, Auth, Concurrencia)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div class="calc-result-item">
+              <span class="calc-result-label">Reserva de Asimilación Humana</span>
+              <span id="res-assim-time" class="calc-result-val highlight">2h 0m</span>
+            </div>
+
+            <div class="calc-result-item">
+              <span class="calc-result-label">Tiempo Total de Entrega Segura</span>
+              <span id="res-total-delivery" class="calc-result-val">4h 0m</span>
+            </div>
+
+            <div class="calc-result-item">
+              <span class="calc-result-label">Aceleración Real Sostenible</span>
+              <span id="res-speedup" class="calc-result-val emerald">5.0x más rápido</span>
+            </div>
+
+            <div class="calc-result-item">
+              <span class="calc-result-label">Evaluación de Riesgo Cognitivo</span>
+              <span id="res-risk-badge" class="pill pill-amber" style="margin-top:0.35rem; align-self: flex-start;">Riesgo Moderado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         HUB DE RECURSOS / DESCARGAS
+         ==================================================================== -->
+    <section id="recursos" class="data-grid-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="pill pill-doi"><span class="doi-dot"></span> OPEN RESEARCH</span>
+          <h2>Materiales y Documentación Oficial</h2>
+          <p>Todos los documentos y presentaciones están disponibles en acceso abierto bajo licencia Creative Commons:</p>
+        </div>
+
+        <div class="downloads-grid">
+          <!-- Monografía Completa -->
+          <div class="download-card">
+            <div class="download-icon">📄</div>
+            <h3>Monografía Completa</h3>
+            <p>El position paper formal de 19 páginas con el aparato bibliográfico completo y diseño editorial académico.</p>
+            <a href="docs/El_Efecto_Bullet.pdf" download class="btn btn-primary btn-sm" style="width: 100%;">Descargar PDF (19p)</a>
+          </div>
+
+          <!-- Diapositivas Interactivas -->
+          <div class="download-card">
+            <div class="download-icon">🖥️</div>
+            <h3>Presentación Ejecutiva</h3>
+            <p>Diapositivas interactivas en HTML para presentar ante directorios, comités de ingeniería y equipos de desarrollo.</p>
+            <a href="#slides-modal" class="btn btn-secondary btn-sm js-open-slides" style="width: 100%;">Abrir Diapositivas</a>
+          </div>
+
+          <!-- Versión Corta -->
+          <div class="download-card">
+            <div class="download-icon">⚡</div>
+            <h3>Versión Ejecutiva (5 min)</h3>
+            <p>Resumen concentrado con las conclusiones, datos clave y el protocolo de experimentación 2×2.</p>
+            <a href="docs/El_Efecto_Bullet_version_corta.pdf" download class="btn btn-secondary btn-sm" style="width: 100%;">Descargar Resumen PDF</a>
+          </div>
+
+          <!-- Repositorio & DOI -->
+          <div class="download-card">
+            <div class="download-icon">🌐</div>
+            <h3>Registro DOI Oficial</h3>
+            <p>Indexado formalmente en Zenodo / CERN con metadatos abiertos y preservación permanente.</p>
+            <a href="https://doi.org/10.5281/zenodo.23641059" target="_blank" rel="noopener noreferrer" class="btn btn-zenodo btn-sm" style="width: 100%;">Ver en Zenodo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CITACIÓN ACADÉMICA
+         ==================================================================== -->
+    <section id="citar">
+      <div class="container">
+        <div class="section-header">
+          <span class="pill pill-amber">CITACIÓN FORMAL</span>
+          <h2>Cómo citar este trabajo</h2>
+          <p>Seleccioná el formato de referencia para incluir la monografía en tus investigaciones, artículos o reportes internos:</p>
+        </div>
+
+        <div class="citation-container">
+          <div class="citation-tabs">
+            <button class="tab-btn active" data-format="bibtex">BibTeX</button>
+            <button class="tab-btn" data-format="apa">APA 7ma Ed.</button>
+            <button class="tab-btn" data-format="ieee">IEEE</button>
+            <button class="tab-btn" data-format="ris">RIS (Zotero/Mendeley)</button>
+          </div>
+
+          <div class="citation-code-box">
+            <button id="copy-citation-btn" class="btn btn-secondary btn-sm btn-copy-citation">Copiar Cita</button>
+            <pre><code id="citation-code">@techreport{fabian2026efectobullet,
+  author       = {Fabian, Ariel},
+  title        = {El Efecto Bullet: Deuda Cognitiva y la Ilusi\'on de la Velocidad en la Era de la IA},
+  institution  = {Zenodo},
+  year         = {2026},
+  month        = {oct},
+  doi          = {10.5281/zenodo.23641059},
+  url          = {https://doi.org/10.5281/zenodo.23641059}
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SOBRE EL AUTOR
+         ==================================================================== -->
+    <section id="autor">
+      <div class="container">
+        <div class="author-box">
+          <div class="author-avatar">♞</div>
+          <div class="author-info">
+            <h3>Ariel Fabian</h3>
+            <div class="author-role">Investigador en Gobernanza de Software e IA · Autor de "El Efecto Bullet"</div>
+            <p class="author-bio">
+              Especialista en arquitectura de software, cognición de sistemas y metodologías de ingeniería. Impulsor de marcos de trabajo que priorizan la comprensión profunda (<em>Theory Building</em>) y la velocidad sostenible frente a la ilusión de productividad no gobernada.
+            </p>
+            <div class="author-links">
+              <a href="https://www.linkedin.com/in/arielfabian/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">LinkedIn</a>
+              <a href="https://github.com/arfab" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub (@arfab)</a>
+              <a href="https://doi.org/10.5281/zenodo.23641059" target="_blank" rel="noopener noreferrer" class="btn btn-zenodo btn-sm">Perfil Zenodo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>El Efecto Bullet</h4>
+          <p>
+            Investigación abierta sobre cognición humana, arquitectura de software y el impacto de los modelos generativos de código en la estabilidad industrial.
+          </p>
+          <div style="margin-top: 1rem;">
+            <a href="https://doi.org/10.5281/zenodo.23641059" target="_blank" rel="noopener noreferrer" class="pill pill-doi">
+              DOI: 10.5281/zenodo.23641059
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#problema">El Problema de Naur</a></li>
+            <li><a href="#evidencia">Evidencias Empíricas</a></li>
+            <li><a href="#pilares">Las 5 Reglas Operativas</a></li>
+            <li><a href="#calculadora">Calculadora 10+10</a></li>
+            <li><a href="#recursos">Hub de Recursos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Recursos Abiertos</h4>
+          <ul>
+            <li><a href="docs/El_Efecto_Bullet.pdf" download>Monografía PDF Oficial</a></li>
+            <li><a href="docs/El_Efecto_Bullet_version_corta.pdf" download>Versión Ejecutiva PDF</a></li>
+            <li><a href="#slides-modal" class="js-open-slides">Diapositivas Interactivas</a></li>
+            <li><a href="https://github.com/arfab" target="_blank" rel="noopener noreferrer">Código y Hooks en GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Ariel Fabian. Publicado bajo Licencia Abierta Creative Commons (CC BY 4.0).</div>
+        <div>Zenodo Open Research · Preservación Permanente</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       MODAL DE DIAPOSITIVAS
+       ==================================================================== -->
+  <div id="slides-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span style="font-weight: 600; font-size: 0.95rem; color: #f8fafc;">Diapositivas Ejecutivas — El Efecto Bullet</span>
+        <button id="close-slides-modal" class="modal-close-btn" aria-label="Cerrar presentación">✕</button>
+      </div>
+      <iframe id="slides-iframe" class="modal-iframe" title="Presentación El Efecto Bullet"></iframe>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
