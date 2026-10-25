@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://arfab.github.io/efectobullet/">
   <meta property="og:image" content="images/hero_chess_knight.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♞</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23e53e3e%22/><text x=%2250%%22 y=%2255%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2260%22>🧠</text></svg>">
   
   <!-- Google Fonts: Inter + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,14 +32,19 @@
   <header class="header">
     <div class="container nav-wrapper">
       <a href="#" class="brand">
-        <span class="brand-icon">♞</span>
+        <span class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
+            <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/>
+            <path d="M12 5v13"/>
+          </svg>
+        </span>
         <span>EL EFECTO BULLET</span>
       </a>
 
       <ul class="nav-links">
         <li><a href="#escenarios">Los 3 Escenarios</a></li>
         <li><a href="#fundamentos">Fundamentos</a></li>
-        <li><a href="#calculadora">Calculadora 10+10</a></li>
         <li><a href="#descarga">Descargar Paper</a></li>
       </ul>
 
@@ -69,7 +74,7 @@
         </h1>
 
         <p class="hero-subtitle">
-          <strong>La IA genera código en segundos. Eso no significa que tu equipo lo entienda.</strong><br>
+          <strong>La IA genera código en segundos.<br>Eso no significa que tu equipo lo entienda.</strong><br>
           Cuando la velocidad de generación supera la asimilación biológica humana, acumulamos <strong>deuda cognitiva</strong>: sistemas que compilan y pasan tests hoy, pero que nadie sabrá modificar mañana.
         </p>
 
@@ -228,74 +233,6 @@
             <h3>Diapositivas Ejecutivas</h3>
             <p>Presentación interactiva completa en HTML diseñada para directorios y comités técnicos.</p>
             <a href="docs/presentacion.html" target="_blank" class="btn btn-secondary btn-sm">Abrir slides »</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         CALCULADORA DE ASIMILACIÓN INTERACTIVA
-         ==================================================================== -->
-    <section id="calculadora" class="calc-section">
-      <div class="container">
-        <div class="calc-box">
-          <div class="calc-inputs">
-            <div>
-              <span class="pill pill-red" style="margin-bottom:0.5rem;">HERRAMIENTA INTERACTIVA</span>
-              <h2 style="font-size: 1.85rem; margin-top:0.35rem;">Calculadora de Asimilación (10+10)</h2>
-              <p style="font-size:0.92rem; color:var(--text-muted);">
-                Estimá el tiempo mínimo de inspección Fagan y la reserva cognitiva necesaria para no acumular deuda ciega:
-              </p>
-            </div>
-
-            <div class="form-group">
-              <div class="form-label-row">
-                <label for="calc-locs">Líneas de código generadas por IA</label>
-                <span id="val-locs" class="val">250 LOC</span>
-              </div>
-              <input type="range" id="calc-locs" min="50" max="1500" step="25" value="250">
-            </div>
-
-            <div class="form-group">
-              <div class="form-label-row">
-                <label for="calc-ai-hours">Tiempo invertido en prompts / generación</label>
-                <span id="val-ai-hours" class="val">2.0 h</span>
-              </div>
-              <input type="range" id="calc-ai-hours" min="0.5" max="10" step="0.5" value="2.0">
-            </div>
-
-            <div class="form-group">
-              <label for="calc-crit" style="font-weight:600; font-size:0.9rem;">Criticidad del componente</label>
-              <select id="calc-crit" class="select-styled">
-                <option value="normal">Periférico (UI, scripts, maquetas)</option>
-                <option value="alta" selected>Alta (Integraciones, APIs clientes, ETL)</option>
-                <option value="critica">Crítica Transaccional (Facturación, Auth, Locks)</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="calc-results">
-            <div class="calc-res-item">
-              <span class="lbl">Reserva de Asimilación Fagan / 10+10</span>
-              <span id="res-assim-time" class="val">2h 0m</span>
-            </div>
-
-            <div class="calc-res-item">
-              <span class="lbl">Tiempo Total de Entrega Segura</span>
-              <span id="res-total-delivery" class="val" style="color:var(--text-title); font-size:1.4rem;">4h 0m</span>
-            </div>
-
-            <div class="calc-res-item">
-              <span class="lbl">Aceleración Real Sostenible</span>
-              <span id="res-speedup" class="val" style="color:var(--accent-emerald); font-size:1.4rem;">5.0x más rápido</span>
-            </div>
-
-            <div class="calc-res-item">
-              <span class="lbl">Diagnóstico de Riesgo</span>
-              <span id="res-risk-badge" style="font-weight:700; font-size:0.88rem; color:var(--accent-red); margin-top:0.25rem;">
-                Riesgo Moderado (Asimilación Obligatoria)
-              </span>
-            </div>
           </div>
         </div>
       </div>
