@@ -1240,3 +1240,263 @@ input[type=range]::-webkit-slider-thumb:hover {
     font-size: 1.85rem;
   }
 }
+
+/* ==========================================================================
+   SCENARIOS SECTION (EL TRÍPTICO DE LA DEUDA COGNITIVA)
+   ========================================================================== */
+.scenarios-section {
+  padding: 5rem 0;
+  background: radial-gradient(circle at 50% 30%, rgba(30, 41, 59, 0.4) 0%, rgba(7, 10, 16, 0.95) 75%);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.scenarios-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.scenario-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scenario-tab:hover {
+  background: rgba(30, 41, 59, 0.9);
+  color: var(--text-main);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.scenario-tab.active {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(59, 130, 246, 0.15));
+  color: #ffffff;
+  border-color: var(--accent-amber);
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.2);
+}
+
+.scenario-tab .tab-icon {
+  font-size: 1.25rem;
+}
+
+.scenario-tab-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-amber);
+  background: rgba(245, 158, 11, 0.15);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius-sm);
+}
+
+.scenario-card-container {
+  position: relative;
+  min-height: 520px;
+}
+
+.scenario-view {
+  display: none;
+  animation: fadeInScenario 0.35s ease forwards;
+}
+
+.scenario-view.active {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3.5rem;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.75rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeInScenario {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.scenario-visual-box {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: #090d16;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+.scenario-visual-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 380px;
+}
+
+.scenario-visual-placeholder {
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  background: radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 0.6) 0%, #090d16 100%);
+  gap: 1rem;
+}
+
+.visual-placeholder-icon {
+  font-size: 4rem;
+  filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.3));
+}
+
+.visual-placeholder-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.visual-placeholder-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  max-width: 280px;
+}
+
+.scenario-badge-strip {
+  padding: 0.75rem 1rem;
+  background: rgba(11, 15, 25, 0.95);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.scenario-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.scenario-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.scenario-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.scenario-story {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.scenario-metrics-box {
+  background: rgba(9, 13, 22, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+.metric-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.metric-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+}
+
+.metric-bar-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.metric-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fill-emerald { background: linear-gradient(90deg, #10b981, #34d399); }
+.fill-amber { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+.fill-rose { background: linear-gradient(90deg, #f43f5e, #fb7185); }
+.fill-blue { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+
+.scenario-deep-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px dashed var(--border-subtle);
+  color: var(--accent-cyan);
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.scenario-deep-btn:hover {
+  border-color: var(--accent-cyan);
+  background: rgba(6, 182, 212, 0.08);
+}
+
+.scenario-deep-drawer {
+  display: none;
+  background: rgba(15, 23, 42, 0.95);
+  border-left: 3px solid var(--accent-amber);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #e2e8f0;
+  animation: fadeInScenario 0.25s ease forwards;
+}
+
+.scenario-deep-drawer.open {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .scenario-view.active {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.75rem;
+  }
+}
+

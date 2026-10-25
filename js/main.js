@@ -210,4 +210,38 @@ ER  - `
       });
     });
   }
+
+  // 6. Conmutador de Escenarios (Tríptico de Deuda Cognitiva)
+  const scenarioTabs = document.querySelectorAll('.scenario-tab');
+  const scenarioViews = document.querySelectorAll('.scenario-view');
+
+  scenarioTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-target');
+      
+      scenarioTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      scenarioViews.forEach(view => {
+        if (view.id === targetId) {
+          view.classList.add('active');
+        } else {
+          view.classList.remove('active');
+        }
+      });
+    });
+  });
+
+  // Toggles de "Ver más detalles del paper" en cada escenario
+  const deepBtns = document.querySelectorAll('.scenario-deep-btn');
+  deepBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const drawer = btn.nextElementSibling;
+      if (drawer && drawer.classList.contains('scenario-deep-drawer')) {
+        drawer.classList.toggle('open');
+        const isOpen = drawer.classList.contains('open');
+        btn.innerHTML = isOpen ? `▲ Ocultar detalles` : `🔍 Ver detalles en el paper`;
+      }
+    });
+  });
 });

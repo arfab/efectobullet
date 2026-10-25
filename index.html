@@ -47,6 +47,7 @@
       </a>
 
       <ul class="nav-links">
+        <li><a href="#escenarios">3 Escenarios</a></li>
         <li><a href="#problema">El Problema</a></li>
         <li><a href="#evidencia">Datos Empíricos</a></li>
         <li><a href="#pilares">5 Reglas</a></li>
@@ -112,6 +113,221 @@
               <div class="hero-card-title">Del Reflejo Muscular a la Teoría del Programa</div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         EL TRÍPTICO DE LA DEUDA COGNITIVA (3 ESCENARIOS VISUALES)
+         ==================================================================== -->
+    <section id="escenarios" class="scenarios-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="pill pill-amber">EL TRÍPTICO DE LA DEUDA COGNITIVA</span>
+          <h2>Tres Formas de Desarrollar Software</h2>
+          <p>Explorá cómo la velocidad de generación impacta la comprensión real del equipo y la acumulación de incidentes:</p>
+        </div>
+
+        <!-- Botones de Navegación de Escenarios -->
+        <div class="scenarios-nav">
+          <button class="scenario-tab active" data-target="escenario-1">
+            <span class="scenario-tab-num">01</span>
+            <span class="tab-icon">✍️</span>
+            <span>100% Humano (Artesanal)</span>
+          </button>
+          <button class="scenario-tab" data-target="escenario-2">
+            <span class="scenario-tab-num">02</span>
+            <span class="tab-icon">⚡</span>
+            <span>100% IA (El Efecto Bullet)</span>
+          </button>
+          <button class="scenario-tab" data-target="escenario-3">
+            <span class="scenario-tab-num">03</span>
+            <span class="tab-icon">🏛️</span>
+            <span>Sócrates & 10+10 (Centauro)</span>
+          </button>
+        </div>
+
+        <!-- Contenedor de Vistas / Diapositivas -->
+        <div class="scenario-card-container">
+          
+          <!-- ESCENARIO 1: DESARROLLO ARTESANAL -->
+          <div id="escenario-1" class="scenario-view active">
+            <div class="scenario-visual-box">
+              <img src="images/hero_chess_knight.jpg" alt="Desarrollo humano artesanal">
+              <div class="scenario-badge-strip">
+                <span style="color: #94a3b8;">TIEMPO: ~40 horas</span>
+                <span style="color: #34d399;">DEUDA COGNITIVA: MÍNIMA</span>
+              </div>
+            </div>
+            <div class="scenario-content">
+              <div class="scenario-header-row">
+                <span class="pill pill-amber">ESCENARIO 01 · EL PASADO</span>
+              </div>
+              <h3 class="scenario-title">Lento, pero el equipo es dueño del sistema</h3>
+              <p class="scenario-story">
+                Antes de los LLMs, el ritmo pausado del desarrollo manual actuaba como un filtro cognitivo invisible. Para escribir cada función había que pensarla, descartar alternativas y forjar un modelo mental vivo en el equipo. El cuello de botella era escribir código, pero quien lo escribía era dueño absoluto de la arquitectura.
+              </p>
+
+              <div class="scenario-metrics-box">
+                <div class="metric-bar-item">
+                  <div class="metric-bar-label">
+                    <span>Velocidad de Entrega</span>
+                    <span style="color:#94a3b8;">1x (40 horas manuales)</span>
+                  </div>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill fill-blue" style="width: 20%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-bar-item">
+                  <div class="metric-bar-label">
+                    <span>Comprensión del Sistema (Teoría de Naur)</span>
+                    <span style="color:#34d399;">100% (Total asimilación)</span>
+                  </div>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill fill-emerald" style="width: 100%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-bar-item">
+                  <div class="metric-bar-label">
+                    <span>Deuda Cognitiva Acumulada</span>
+                    <span style="color:#34d399;">Nula / Residual</span>
+                  </div>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill fill-emerald" style="width: 5%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="scenario-deep-btn">🔍 Ver detalles en el paper</button>
+              <div class="scenario-deep-drawer">
+                <strong>Peter Naur (1985) — <em>Programming as Theory Building</em>:</strong><br>
+                Naur demostró que el software no vive en el código escrito, sino en la teoría mental compartida del equipo. Si quien modifica el sistema no participó en las decisiones ni entiende los invariantes, cada cambio futuro tiene un costo exponencial de mantenimiento y riesgo de rotura.
+              </div>
+            </div>
+          </div>
+
+          <!-- ESCENARIO 2: LA TRAMPA BULLET -->
+          <div id="escenario-2" class="scenario-view">
+            <div class="scenario-visual-box">
+              <img src="images/chess_clock_fischer.jpg" alt="La trampa de velocidad del ajedrez bullet">
+              <div class="scenario-badge-strip">
+                <span style="color: #fbbf24;">TIEMPO: ~4 horas</span>
+                <span style="color: #fb7185;">DEUDA COGNITIVA: CRÍTICA</span>
+              </div>
+            </div>
+            <div class="scenario-content">
+              <div class="scenario-header-row">
+                <span class="pill pill-amber" style="background: rgba(244,63,94,0.15); border-color: rgba(244,63,94,0.4); color: #fb7185;">ESCENARIO 02 · LA TRAMPA ACTUAL</span>
+              </div>
+              <h3 class="scenario-title">Hiper-velocidad ilusoria y ceguera técnica</h3>
+              <p class="scenario-story">
+                La IA genera en minutos lo que antes llevaba semanas. Parece un milagro 10x. Pero el desarrollador se convierte en un espectador pasivo: no descartó caminos ni anticipó esquinas rotas. Cuando el ritmo sube, la revisión de PRs colapsa en un escaneo superficial. El software compila y pasa tests básicos, pero el equipo es rehén de una caja negra.
+              </p>
+
+              <div class="scenario-metrics-box">
+                <div class="metric-bar-item">
+                  <div class="metric-bar-label">
+                    <span>Velocidad Aparente</span>
+                    <span style="color:#fbbf24;">10x Ilusorio (4 horas)</span>
+                  </div>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill fill-amber" style="width: 95%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-bar-item">
+                  <div class="metric-bar-label">
+                    <span>Revisión Humana Profunda</span>
+                    <span style="color:#fb7185;">Se desploma al 21% (He & Vasilescu)</span>
+                  </div>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill fill-rose" style="width: 21%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-bar-item">
+                  <div class="metric-bar-label">
+                    <span>Incidentes Críticos en Producción</span>
+                    <span style="color:#fb7185;">+125.4% (Faros AI Report 2026)</span>
+                  </div>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill fill-rose" style="width: 95%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="scenario-deep-btn">🔍 Ver detalles en el paper</button>
+              <div class="scenario-deep-drawer">
+                <strong>Evidencias Cuantitativas:</strong><br>
+                • <em>He & Vasilescu (Carnegie Mellon/Stanford, 2026):</em> En 196.000 PRs, la revisión profunda cayó de 48% a 21%.<br>
+                • <em>Shaw & Nave (Wharton, 2026):</em> Bajo presión de tiempo, la probabilidad de aceptar código erróneo de la IA se multiplica por más de tres.<br>
+                • <em>Shen & Tamkin (Anthropic, 2025):</em> 17 puntos porcentuales menos de comprensión al delegar en el modelo.
+              </div>
+            </div>
+          </div>
+
+          <!-- ESCENARIO 3: LA SOLUCIÓN CENTAURO Y SÓCRATES -->
+          <div id="escenario-3" class="scenario-view">
+            <div class="scenario-visual-box">
+              <img src="images/centaur_model.jpg" alt="Modelo centauro y peaje cognitivo socrático">
+              <div class="scenario-badge-strip">
+                <span style="color: #34d399;">TIEMPO: 8 horas (5x REAL)</span>
+                <span style="color: #34d399;">PEAJE SOCRÁTICO: ACTIVO</span>
+              </div>
+            </div>
+            <div class="scenario-content">
+              <div class="scenario-header-row">
+                <span class="pill pill-amber" style="background: rgba(16,185,129,0.15); border-color: rgba(16,185,129,0.4); color: #34d399;">ESCENARIO 03 · NUESTRA PROPUESTA</span>
+              </div>
+              <h3 class="scenario-title">La Regla 10+10 y el Peaje Socrático</h3>
+              <p class="scenario-story">
+                Aceleración real sin ceguera técnica. <strong>Regla del 10 + 10:</strong> por cada hora de generación asistida en código crítico, se reserva una hora de asimilación e inspección activa. <strong>El Peaje Socrático:</strong> antes de cada commit, "Sócrates" baja la barrera e interroga al programador sobre invariantes, supuestos de falla y cambios de negocio sin ayuda de la IA.
+              </p>
+
+              <div class="scenario-metrics-box">
+                <div class="metric-bar-item">
+                  <div class="metric-bar-label">
+                    <span>Aceleración Sostenible Real</span>
+                    <span style="color:#34d399;">5.0x más rápido (8h vs 40h manuales)</span>
+                  </div>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill fill-emerald" style="width: 75%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-bar-item">
+                  <div class="metric-bar-label">
+                    <span>Comprensión Arquitectónica Verificada</span>
+                    <span style="color:#34d399;">100% (Semáforo Verde Obligatorio)</span>
+                  </div>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill fill-emerald" style="width: 100%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-bar-item">
+                  <div class="metric-bar-label">
+                    <span>Deuda Cognitiva Prevenida</span>
+                    <span style="color:#34d399;">100% Controlada (Inspección Fagan)</span>
+                  </div>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill fill-emerald" style="width: 100%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="scenario-deep-btn">🔍 Ver detalles en el paper</button>
+              <div class="scenario-deep-drawer">
+                <strong>Principios Operativos del Paper:</strong><br>
+                • <em>Michael Fagan (IBM, 1976):</em> Ritmo de referencia de 100 a 200 líneas de lógica densa por hora.<br>
+                • <em>El Examen Socrático:</em> 3 preguntas obligatorias: 1) Flujo de datos e invariantes, 2) Supuestos de falla y concurrencia, 3) Impacto ante cambio de regla de negocio.<br>
+                • <em>Principio Kaspárov (2005):</em> Un proceso riguroso pesa más que la potencia de cálculo pura.
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
