@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arfab.github.io/efectobullet/sitemap.xml
