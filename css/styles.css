@@ -120,9 +120,13 @@ a:hover {
   justify-content: center;
   width: 36px;
   height: 36px;
-  background: var(--accent-red);
+  background: #0f172a;
   border-radius: var(--radius-sm);
-  box-shadow: 0 2px 8px rgba(229, 62, 62, 0.3);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.25);
+}
+
+.brand-icon svg {
+  color: #f8fafc;
 }
 
 .nav-links {
@@ -618,6 +622,18 @@ input[type=range]::-webkit-slider-thumb {
   width: 100%;
 }
 
+.btn-ghost-dark {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-ghost-dark:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
 /* MODAL DE DETALLE (Para que no esté todo apiñado en la home) */
 .modal-overlay {
   position: fixed;
@@ -649,6 +665,8 @@ input[type=range]::-webkit-slider-thumb {
   position: relative;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   animation: modalIn 0.25s ease-out;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 @keyframes modalIn {
@@ -676,12 +694,15 @@ input[type=range]::-webkit-slider-thumb {
   font-size: 1.6rem;
   margin-bottom: 1rem;
   padding-right: 2rem;
+  line-height: 1.3;
 }
 
 .modal-body {
   font-size: 0.95rem;
   line-height: 1.7;
   color: var(--text-body);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .modal-body p {
@@ -690,6 +711,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .modal-body ul {
   margin: 0 0 1.25rem 1.5rem;
+  padding-left: 0.25rem;
 }
 
 .modal-body blockquote {
@@ -730,5 +752,41 @@ input[type=range]::-webkit-slider-thumb {
   
   .hero-title {
     font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .modal-overlay {
+    padding: 0.75rem;
+    align-items: center;
+  }
+  
+  .modal-box {
+    padding: 1.5rem 1.15rem;
+    max-height: 88vh;
+    border-radius: var(--radius-md);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .modal-title {
+    font-size: 1.25rem;
+    padding-right: 1.75rem;
+  }
+  
+  .modal-body {
+    font-size: 0.9rem;
+  }
+  
+  .modal-body ul {
+    margin-left: 1.1rem;
+  }
+  
+  .paper-cta-box {
+    padding: 2rem 1.25rem;
+  }
+  
+  .paper-cta-box h2 {
+    font-size: 1.6rem;
   }
 }

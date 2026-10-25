@@ -62,9 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const orig = copyBtn.innerHTML;
         copyBtn.innerHTML = '✓ ¡Cita Copiada!';
         copyBtn.style.color = '#34d399';
+        copyBtn.style.borderColor = '#34d399';
         setTimeout(() => {
           copyBtn.innerHTML = orig;
-          copyBtn.style.color = '';
+          copyBtn.style.color = '#f8fafc';
+          copyBtn.style.borderColor = '';
         }, 2200);
       });
     });

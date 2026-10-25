@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://arfab.github.io/efectobullet/">
   <meta property="og:image" content="images/hero_chess_knight.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23e53e3e%22/><text x=%2250%%22 y=%2255%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2260%22>🧠</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230f172a%22/><circle cx=%2250%22 cy=%2256%22 r=%2228%22 fill=%22none%22 stroke=%22%23f8fafc%22 stroke-width=%227%22/><line x1=%2250%22 y1=%2256%22 x2=%2250%22 y2=%2239%22 stroke=%22%23f59e0b%22 stroke-width=%227%22 stroke-linecap=%22round%22/><line x1=%2250%22 y1=%2256%22 x2=%2263%22 y2=%2263%22 stroke=%22%23f8fafc%22 stroke-width=%226%22 stroke-linecap=%22round%22/><line x1=%2240%22 y1=%2218%22 x2=%2260%22 y2=%2218%22 stroke=%22%23f8fafc%22 stroke-width=%227%22 stroke-linecap=%22round%22/><line x1=%2250%22 y1=%2218%22 x2=%2250%22 y2=%2228%22 stroke=%22%23f8fafc%22 stroke-width=%227%22 stroke-linecap=%22round%22/></svg>">
   
   <!-- Google Fonts: Inter + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,10 +33,11 @@
     <div class="container nav-wrapper">
       <a href="#" class="brand">
         <span class="brand-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
-            <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/>
-            <path d="M12 5v13"/>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="13" r="8"></circle>
+            <path d="M12 9v4l2 2"></path>
+            <path d="M10 2h4"></path>
+            <path d="M12 2v3"></path>
           </svg>
         </span>
         <span>EL EFECTO BULLET</span>
@@ -106,22 +107,8 @@
               <span class="scenario-tag tag-blue">Escenario 01 · El Pasado</span>
               <h3 class="scenario-title">Desarrollo Artesanal</h3>
               <p class="scenario-desc">
-                Lento (40h), pero el equipo forja el modelo mental del sistema paso a paso (Teoría de Naur). Cero deuda cognitiva ciega.
+                Lento (~40 horas manuales), pero el equipo forja el modelo mental del sistema paso a paso (Teoría del Programa de Naur). Cero deuda cognitiva ciega.
               </p>
-              <div class="scenario-stats">
-                <div class="stat-item">
-                  <span class="lbl">Ritmo</span>
-                  <span class="val">~40h manual</span>
-                </div>
-                <div class="stat-item">
-                  <span class="lbl">Comprensión</span>
-                  <span class="val" style="color:var(--accent-emerald);">100% Total</span>
-                </div>
-                <div class="stat-item">
-                  <span class="lbl">Deuda</span>
-                  <span class="val" style="color:var(--accent-emerald);">Mínima</span>
-                </div>
-              </div>
               <button class="btn btn-secondary scenario-btn js-open-modal" data-modal="modal-escenario-1">
                 Más sobre el origen »
               </button>
@@ -138,22 +125,8 @@
               <span class="scenario-tag tag-red">Escenario 02 · El Presente</span>
               <h3 class="scenario-title">La Trampa Bullet</h3>
               <p class="scenario-desc">
-                Velocidad ilusoria (4h). El código aparece en minutos, pero la revisión se desploma al 21% y los incidentes en producción se disparan 125%.
+                Velocidad ilusoria (~4 horas). El código aparece en minutos, pero la revisión humana profunda cae al 21% y los incidentes en producción se disparan un 125%.
               </p>
-              <div class="scenario-stats">
-                <div class="stat-item">
-                  <span class="lbl">Aparente</span>
-                  <span class="val">4h (10x falso)</span>
-                </div>
-                <div class="stat-item">
-                  <span class="lbl">Revisión</span>
-                  <span class="val" style="color:var(--accent-red);">Cae al 21%</span>
-                </div>
-                <div class="stat-item">
-                  <span class="lbl">Incidentes</span>
-                  <span class="val" style="color:var(--accent-red);">+125.4%</span>
-                </div>
-              </div>
               <button class="btn btn-secondary scenario-btn js-open-modal" data-modal="modal-escenario-2">
                 Más sobre la trampa »
               </button>
@@ -170,22 +143,8 @@
               <span class="scenario-tag tag-green">Escenario 03 · Solución</span>
               <h3 class="scenario-title">Peaje Socrático & 10+10</h3>
               <p class="scenario-desc">
-                Aceleración real sin ceguera. Por cada hora de IA, una de asimilación. Sócrates baja la barrera antes del commit con 3 preguntas clave.
+                Aceleración real 5x sostenible. Por cada hora de IA, una de asimilación humana. Sócrates baja la barrera antes del commit con 3 preguntas sobre invariantes y fallas.
               </p>
-              <div class="scenario-stats">
-                <div class="stat-item">
-                  <span class="lbl">Entrega Real</span>
-                  <span class="val" style="color:var(--accent-emerald);">5.0x Sostenible</span>
-                </div>
-                <div class="stat-item">
-                  <span class="lbl">Comprensión</span>
-                  <span class="val" style="color:var(--accent-emerald);">Verificada</span>
-                </div>
-                <div class="stat-item">
-                  <span class="lbl">Semáforo</span>
-                  <span class="val" style="color:var(--accent-emerald);">Verde</span>
-                </div>
-              </div>
               <button class="btn btn-action scenario-btn js-open-modal" data-modal="modal-escenario-3">
                 Más sobre la solución »
               </button>
@@ -260,10 +219,10 @@
           <a href="docs/El_Efecto_Bullet.pdf" download class="btn btn-primary">
             Descargar Monografía (PDF 19p) ↓
           </a>
-          <a href="docs/El_Efecto_Bullet_version_corta.pdf" download class="btn btn-secondary" style="background:transparent; color:#ffffff; border-color:rgba(255,255,255,0.3);">
+          <a href="docs/El_Efecto_Bullet_version_corta.pdf" download class="btn btn-ghost-dark">
             Descargar Resumen Ejecutivo (5 min) ↓
           </a>
-          <button id="copy-citation-btn" class="btn btn-secondary btn-sm" style="background:transparent; color:#cbd5e1; border-color:rgba(255,255,255,0.2);">
+          <button id="copy-citation-btn" class="btn btn-ghost-dark btn-sm">
             📋 Copiar Cita BibTeX
           </button>
         </div>
