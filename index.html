@@ -43,12 +43,6 @@
         <span>EL EFECTO BULLET</span>
       </a>
 
-      <ul class="nav-links">
-        <li><a href="#escenarios">Los 3 Escenarios</a></li>
-        <li><a href="#fundamentos">Fundamentos</a></li>
-        <li><a href="#descarga">Descargar Paper</a></li>
-      </ul>
-
       <div class="nav-actions">
         <a href="https://doi.org/10.5281/zenodo.23641059" target="_blank" rel="noopener noreferrer" class="pill pill-doi">
           <span class="doi-dot"></span> DOI Zenodo
@@ -86,6 +80,9 @@
           <a href="#escenarios" class="btn btn-secondary">
             Ver los 3 Escenarios ↓
           </a>
+          <button class="btn btn-secondary js-open-modal" data-modal="modal-abstract">
+            Leer Abstract »
+          </button>
         </div>
       </div>
     </section>
@@ -232,7 +229,7 @@
         <strong>El Efecto Bullet</strong> · Investigación abierta por <a href="https://www.linkedin.com/in/arielfabian/" target="_blank">Ariel Fabian</a>
       </p>
       <p style="font-size:0.8rem; color:var(--text-muted);">
-        Publicado formalmente en Zenodo bajo DOI <a href="https://doi.org/10.5281/zenodo.23641059" target="_blank">10.5281/zenodo.23641059</a> · Código disponible en <a href="https://github.com/arfab/efectobullet" target="_blank">GitHub (@arfab)</a>
+        Publicado formalmente en Zenodo bajo DOI <a href="https://doi.org/10.5281/zenodo.23641059" target="_blank">10.5281/zenodo.23641059</a> · Licencia Creative Commons (CC BY 4.0)
       </p>
     </div>
   </footer>
@@ -240,6 +237,32 @@
   <!-- ====================================================================
        MODALES DE PROFUNDIZACIÓN (Para mantener la Home limpia)
        ==================================================================== -->
+  
+  <!-- Modal Abstract -->
+  <div id="modal-abstract" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close">✕</button>
+      <span class="pill pill-doi" style="margin-bottom:0.85rem;"><span class="doi-dot"></span> DOI: 10.5281/zenodo.23641059</span>
+      <h3 class="modal-title">Resumen Oficial / Abstract</h3>
+      <div class="modal-body">
+        <p><strong>Resumen (Español):</strong></p>
+        <p>
+          Los agentes de Inteligencia Artificial generan código en segundos. Pero escribir código rápido no es lo mismo que entenderlo. Cuando un equipo acepta código generado sin tomarse el tiempo de leerlo y analizarlo, acumula <strong>deuda cognitiva</strong>: sistemas que funcionan, pero que nadie en el equipo sabe modificar con seguridad. Así, las fallas pueden llegar directo a producción.
+        </p>
+        <p>
+          Sostenemos que el problema no es la herramienta sino el ritmo: una persona necesita tiempo para entender lógica de software y no puede hacerlo a la velocidad con la que un modelo genera texto. Para analizar este problema usamos la psicología del ajedrez, un campo con ochenta años de investigación sobre memoria, decisiones bajo presión de tiempo e interacción humano-máquina. Planteamos que, cuando el ritmo supera la capacidad de lectura, el desarrollador pasa a una revisión superficial y empieza a aprobar cambios que no entiende.
+        </p>
+        <p>
+          Como respuesta, proponemos cinco reglas de trabajo adaptadas del ajedrez. Las dos centrales son la <strong>regla del 10 + 10</strong>, que establece una reserva mínima obligatoria para leer y asimilar el código proporcional al esfuerzo previo de desarrollo, y un <strong>peaje cognitivo antes del commit</strong>, que exige al programador justificar el cambio por sí mismo sin explicaciones predigeridas de la IA. El objetivo es que el equipo entienda lo que construye sin renunciar a la velocidad. Por último, proponemos un diseño experimental para poner a prueba estas reglas en equipos reales.
+        </p>
+        <hr style="border:0; border-top:1px solid var(--border-color); margin:1.25rem 0;">
+        <p><strong>Abstract (English):</strong></p>
+        <p style="font-size:0.9rem; color:var(--text-muted);">
+          Artificial Intelligence coding agents generate code in seconds. Yet writing code quickly is not the same as understanding it. When a team accepts generated code without taking the time to read and analyze it, it accumulates <strong>cognitive debt</strong>: systems that work today, but that no one on the team knows how to safely modify. In response, we propose five working rules adapted from chess, centered on the <strong>10 + 10 rule</strong> and a <strong>pre-commit cognitive toll</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
   
   <!-- Modal Escenario 1 -->
   <div id="modal-escenario-1" class="modal-overlay">
